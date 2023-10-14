@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo Javascript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Aula Javascript</h1>
+        </div>
+      </div>
+      <!--Atividade 1-->
+
+      <div class="row">
+        <div class="row">
+          <div class="col-2">
+            <button class="btn btn-primary" onclick="operacao10E100()">
+              Ok
+            </button>
+          </div>
+          <div class="col-5">
+            <p>
+              Atividade - 1 Botão para exibir a soma, subtrção, divisão e
+              mutiplicação de 100 e 10
+            </p>
+          </div>
+        </div>
+        <!--Atividade 2-->
+
+        <div class="row">
+          <div class="col-2">
+            <button class="btn btn-primary" onclick="loopOnClick()">
+              loop
+            </button>
+          </div>
+          <div class="col-3">
+            <p>Atividade - 2 Botão para imprimir de 10 a 100</p>
+          </div>
+        </div>
+        <!--Atividade 3-->
+        <div class="row">
+          <div class="col-2">
+            <button class="btn btn-primary" onclick="table5()">
+              Tabela do 5
+            </button>
+          </div>
+          <div class="col-2">
+            <p>Atividade - 3 Botão para exibir a tabela do 5</p>
+          </div>
+        </div>
+      </div>
+      <!--Atividade 4-->
+      <div class="row">
+        <p>Atividade - 4 Exibe a tabela do valor inserido</p>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <button class="btn btn-primary" onclick="tabelaDinamica()">
+            Tabela Dimanica
+          </button>
+        </div>
+        <div class="col-3">
+          <input type="number" id="Valor" />
+        </div>
+      </div>
+      <!--Atividade 5-->
+      <div class="row">
+        <p>
+          Atividade - 5 Realiza a opeção escolhida com os números escolhidos
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="mb-3">
+            <label class="form-label">Num. 1</label>
+            <input class="form-control" id="num1" />
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="mb-3">
+            <label class="form-label">Operação</label>
+            <select class="form-select" id="operacao">
+              <option value="+" selected>Somar</option>
+              <option value="-">Subtrair</option>
+              <option value="/">Dividir</option>
+              <option value="*">Multiplicar</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="mb-3">
+            <label class="form-label">Num. 2</label>
+            <input class="form-control" id="num2" />
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="mb-3" style="margin-top: 30px">
+            <button class="btn btn-danger" onclick="operacao()">
+              Calcular
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="mb-3">
+            <label class="form-label">Resultado</label>
+            <input class="form-control" id="resultado" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <p>
+          Atividade - 6 percorrer um array de números([1,2,3,4,5,6,7,8,9,10]) e
+          exibir os números pares
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <button onclick="arrayPar()" class="btn btn-primary">
+            Percorrer Array
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <p>Atividade - 7</p>
+      </div>
+      <div class="row">
+        <dil class="col-2">
+          <label for="custoFabrica" class="form-label">Custo de Fábrica</label>
+          <input type="number" class="form-control" placeholder="0" id="custoFabrica" min="0" name="custoFabrica"/>
+        </dil>
+        <div class="col-3">
+          <label for="percDistibuidor" class="form-label">Percentual do Distibuidos(%)</label>
+          <input type="number" name="percDistibuidor" class="form-control" placeholder="0" min="0" max="100" maxlength="3" id="percDistibuidor">
+        </div>
+        <div class="col-3">
+          <label for="percImpostos" class="form-label">Porcentagem de Impostos</label>
+          <input type="number" name="percImpostos" class="form-control" placeholder="0" min="0" max="100" maxlength="3" id="percImpostos">
+        </div>
+        <div class="col-4">
+          <button class="btn btn-primary" style="margin-top: 30px;" onclick="calcValorCarro()">Calcular</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-5">
+          <label for="valorFinal" class="form-label">Resultado Final</label>
+          <input type="number" name="valorFinal" id="valorFinal" class="form-control" placeholder="0">
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/Javascript">
+
+
+      function calcValorCarro() {
+        let custoFabri =parseFloat( 
+          document.getElementById("custoFabrica").value);
+        let percDistibuidor = parseFloat(
+        document.getElementById("percDistibuidor").value);
+        let percImpostos = parseFloat(
+        document.getElementById("percImpostos").value);
+        let valorFinal = 0
+        
+        if (percImpostos <= 100 && percDistibuidor <= 100 && percDistibuidor >=0 && percImpostos >= 0) {
+       
+          valorFinal = custoFabri + (custoFabri * (percDistibuidor / 100)) + (custoFabri * (percImpostos / 100))
+        }
+    
+        else{
+          alert("Porcantagem inserida errada, por favor coloque de 0 a 100")
+        }
+        document.getElementById("valorFinal").value = valorFinal;
+      }
+      function arrayPar() {
+        let a = [1,2,3,4,5,6,7,8,9,10]
+        var list = "";
+        a.forEach(num => {
+
+          if(num % 2 == 0){
+            list += num + " "
+          }
+        });
+        alert(list)
+      }
+
+      function operacao10E100(){
+            let a = 10;
+            let b = 100;
+            let soma = 100 + 10;
+            let sub = 100 - 10;
+            let div = 100 / 10;
+            let mult = 100 * 10;
+            alert(`A Soma é: ${soma} \n A Subtração é: ${sub} \n A Divisão é: ${div} \n A Multiplicação é ${mult}`)
+      }
+      function loopOnClick() {
+        var lista = "";
+        for (let index = 10; index <= 100; index++) {
+          if (index != 100) {
+            lista += index + ", ";
+          }
+          else if(index == 100){
+            lista += index + ".";
+          }
+
+
+        }
+        alert(lista)
+      }
+
+      function table5(){
+        const a = 5;
+        var tabela = "";
+        for(let i = 1; i <= 10; i++){
+            tabela += `5 X ${i} = ${a * i} \n`;
+        }
+        alert(tabela)
+      }
+
+      function tabelaDinamica(){
+        let valor = document.getElementById("Valor").value;
+        var tabela = "";
+        for(let i = 1; i <= 10; i++){
+            tabela += `${valor} X ${i} = ${valor * i} \n`;
+        }
+        alert(tabela)
+      }
+
+      function operacao(){
+        let valor1 = parseFloat(
+        document.getElementById("num1").value);
+        let valor2 = parseFloat(
+        document.getElementById("num2").value);
+        let oper = document.getElementById("operacao").value;
+        let result;
+        switch (oper) {
+            case "+":
+                result = valor1 + valor2;
+                break;
+            case "-":
+                result = valor1 - valor2;
+                break;
+            case "*":
+                result = valor1 * valor2;
+                break;
+            case "/":
+                result = valor1 / valor2;
+                break;
+            default:
+                break;
+        }
+        document.getElementById('resultado').value = result;
+
+      }
+    </script>
+  </body>
+</html>
